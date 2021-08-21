@@ -43,195 +43,66 @@ class Widget1 extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<Widget> classes = [
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/acf-bufq-gpu?authuser=1&pli=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("Database Systems")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/gqm-qqhv-gcm?authuser=1&pli=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("D&A of Algorithms")),
-      OutlinedButton(
-          onPressed: () {
-            Clipboard.setData(new ClipboardData(text: "571385123")).then((_) {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text(
-                      'Copied Webex code 571385123 to your clipboard !\nRedirected to webex.....')));
-              launch(
-                  'https://iitjodhpur.webex.com/iitjodhpur/j.php?MTID=mc8e757b66ca9a13b5ad5a0315cf37aff');
-            });
-          },
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.29, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: size.width > 1100
+      classButton(
+          link: 'https://meet.google.com/acf-bufq-gpu?authuser=1&pli=1',
+          title: Text("Database Systems"),
+          width: 0.6),
+      classButton(
+          link: 'https://meet.google.com/gqm-qqhv-gcm?authuser=1&pli=1',
+          title: Text("D&A of Algorithms"),
+          width: 0.6),
+      classButton(
+          link:
+              'https://iitjodhpur.webex.com/iitjodhpur/j.php?MTID=mc8e757b66ca9a13b5ad5a0315cf37aff',
+          title: size.width > 1100
               ? Text("Principles of Programming Languages")
-              : Text("PPL")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/oyk-xigy-itt?pli=1&authuser=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("Operating system")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/yje-pqbg-pxv?pli=1&authuser=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("Computer Architecture")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/fzf-drhk-tnw?pli=1&authuser=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("Law and Society")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/hvt-vqmt-wcb?pli=1&authuser=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.29, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child:
-              size.width > 600 ? Text("Professional Ethics") : Text("Ethics")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/sam-zqcq-bvs?pli=1&authuser=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("OS lab")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/gqm-qqhv-gcm?authuser=1&pli=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("D&A Algo tutorial")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/acf-bufq-gpu?authuser=1&pli=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("DBMS Lab")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/gqm-qqhv-gcm?authuser=1&pli=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.6, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: Text("D&A Algo tutorial")),
-      OutlinedButton(
-          onPressed: () {
-            Clipboard.setData(new ClipboardData(text: "571385123")).then((_) {
-              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  content: Text(
-                      'Copied Webex code 571385123 to your clipboard !\nRedirected to webex.....')));
-              launch(
-                  'https://iitjodhpur.webex.com/iitjodhpur/j.php?MTID=md8f148dac8ee9070f4547d24f5e235f9');
-            });
-          },
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.29, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child: size.width > 1100
+              : Text("PPL"),
+          width: 0.29),
+      classButton(
+          link: 'https://meet.google.com/oyk-xigy-itt?pli=1&authuser=1',
+          title: Text("Operating system"),
+          width: 0.6),
+      classButton(
+          link: 'https://meet.google.com/yje-pqbg-pxv?pli=1&authuser=1',
+          title: Text("Computer Architecture"),
+          width: 0.6),
+      classButton(
+          link: 'https://meet.google.com/fzf-drhk-tnw?pli=1&authuser=1',
+          title: Text("Law and Society"),
+          width: 0.6),
+      classButton(
+          link: 'https://meet.google.com/hvt-vqmt-wcb?pli=1&authuser=1',
+          title:
+              size.width > 600 ? Text("Professional Ethics") : Text("Ethics"),
+          width: 0.29),
+      classButton(
+          link: 'https://meet.google.com/sam-zqcq-bvs?pli=1&authuser=1',
+          title: Text("OS lab"),
+          width: 0.6),
+      classButton(
+          link: 'https://meet.google.com/gqm-qqhv-gcm?authuser=1&pli=1',
+          title: Text("D&A Algo tutorial"),
+          width: 0.6),
+      classButton(
+          link: 'https://meet.google.com/acf-bufq-gpu?authuser=1&pli=1',
+          title: Text("DBMS Lab"),
+          width: 0.6),
+      classButton(
+          link: 'https://meet.google.com/gqm-qqhv-gcm?authuser=1&pli=1',
+          title: Text("D&A Algo tutorial"),
+          width: 0.6),
+      classButton(
+          link:
+              'https://iitjodhpur.webex.com/iitjodhpur/j.php?MTID=md8f148dac8ee9070f4547d24f5e235f9',
+          title: size.width > 1100
               ? Text("Principles of Programming Languages")
-              : Text("PPL")),
-      OutlinedButton(
-          onPressed: () =>
-              launch('https://meet.google.com/wbi-hxox-nbf?pli=1&authuser=1'),
-          style: OutlinedButton.styleFrom(
-              primary: Colors.blue.shade500,
-              // onSurface: Colors.orangeAccent,
-              side: BorderSide(color: Colors.black26, width: 1.5),
-              // minimumSize: Size(50, 50),
-              fixedSize: Size(MediaQuery.of(context).size.width * 0.29, 50),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30)),
-              textStyle: TextStyle(fontSize: 17)),
-          child:
-              size.width > 600 ? Text("Professional Ethics") : Text("Ethics")),
+              : Text("PPL"),
+          width: 0.29),
+      classButton(
+          link: 'https://meet.google.com/wbi-hxox-nbf?pli=1&authuser=1',
+          title:
+              size.width > 600 ? Text("Professional Ethics") : Text("Ethics"),
+          width: 0.29),
     ];
 
     switch (day) {
@@ -383,5 +254,28 @@ class Widget2 extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class classButton extends StatelessWidget {
+  classButton(
+      {@required this.link, @required this.title, @required this.width});
+  final String link;
+  final Widget title;
+  final double width;
+  @override
+  Widget build(BuildContext context) {
+    return OutlinedButton(
+        onPressed: () => launch(link),
+        style: OutlinedButton.styleFrom(
+            primary: Colors.blue.shade500,
+            // onSurface: Colors.orangeAccent,
+            side: BorderSide(color: Colors.black26, width: 1.5),
+            // minimumSize: Size(50, 50),
+            fixedSize: Size(MediaQuery.of(context).size.width * width, 50),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+            textStyle: TextStyle(fontSize: 17)),
+        child: title);
   }
 }
