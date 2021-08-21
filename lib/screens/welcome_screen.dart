@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:intl/intl.dart';
 
-// flutter build web
-// firebase deploy --only hosting
-
 class WelcomeScreen extends StatefulWidget {
   static String id = 'welcome_screen';
 
@@ -18,9 +15,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color(0xffdddddd),
       appBar: AppBar(
-        // backgroundColor: Color(0xff125D98),
         title: Center(child: Text("Time Table for " + day)),
       ),
       body: Center(
@@ -325,7 +320,6 @@ class Widget2 extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 10),
       child: Row(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             width: MediaQuery.of(context).size.width * 0.35,
@@ -355,9 +349,7 @@ class classButton extends StatelessWidget {
         onPressed: () => launch(link),
         style: OutlinedButton.styleFrom(
             primary: Colors.blue.shade500,
-            // onSurface: Colors.orangeAccent,
             side: BorderSide(color: Colors.black26, width: 1.5),
-            // minimumSize: Size(50, 50),
             fixedSize: Size(MediaQuery.of(context).size.width * width, 50),
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
