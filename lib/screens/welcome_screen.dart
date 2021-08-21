@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:intl/intl.dart';
-import 'package:flutter/services.dart';
 
 // flutter build web
 // firebase deploy --only hosting
@@ -125,6 +124,29 @@ class Widget1 extends StatelessWidget {
                     ],
                   )),
               Widget2(time: "11:00 - 11:50", wid: classes[4]),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(right: 15, top: 30, bottom: 30),
+                      height: 1.3,
+                      width: size.width * 0.2,
+                      color: Colors.blue,
+                    ),
+                    Text(
+                      "Evening Classes",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 15, top: 30, bottom: 30),
+                      height: 1.3,
+                      width: size.width * 0.2,
+                      color: Colors.blue,
+                    ),
+                  ]),
               Widget2(time: "4:00 - 4:50", wid: classes[10]),
               Widget2(
                   time: "5:00 - 5:50",
@@ -149,6 +171,29 @@ class Widget1 extends StatelessWidget {
               Widget2(time: "9:00 - 9:50", wid: classes[0]),
               Widget2(time: "10:00 - 10:50", wid: classes[3]),
               Widget2(time: "11:00 - 11:50", wid: classes[1]),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(right: 15, top: 30, bottom: 30),
+                      height: 1.3,
+                      width: size.width * 0.2,
+                      color: Colors.blue,
+                    ),
+                    Text(
+                      "Lab",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 15, top: 30, bottom: 30),
+                      height: 1.3,
+                      width: size.width * 0.2,
+                      color: Colors.blue,
+                    ),
+                  ]),
               Widget2(time: "1:00 - 2:50", wid: classes[7])
             ],
           );
@@ -173,6 +218,29 @@ class Widget1 extends StatelessWidget {
                     ],
                   )),
               Widget2(time: "11:00 - 11:50 AM", wid: classes[1]),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(right: 15, top: 30, bottom: 30),
+                      height: 1.3,
+                      width: size.width * 0.2,
+                      color: Colors.blue,
+                    ),
+                    Text(
+                      "Tutorial",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 15, top: 30, bottom: 30),
+                      height: 1.3,
+                      width: size.width * 0.2,
+                      color: Colors.blue,
+                    ),
+                  ]),
               Widget2(time: "3:00 - 3:50 PM", wid: classes[8])
             ],
           );
@@ -195,13 +263,7 @@ class Widget1 extends StatelessWidget {
                       classes[11]
                     ],
                   )),
-              Widget2(time: "11:00 - 11:50", wid: classes[3]),
-              Widget2(time: "1:00 - 2:50", wid: classes[9]),
-              // ElevatedButton(
-              //     onPressed: () {
-              //       print(size);
-              //     },
-              //     child: Text("hi"))
+              Widget2(time: "11:00 - 11:50", wid: classes[3])
             ],
           );
         }
@@ -214,7 +276,31 @@ class Widget1 extends StatelessWidget {
               Widget2(time: "8:00 - 8:50", wid: classes[5]),
               Widget2(time: "9:00 - 9:50", wid: classes[4]),
               Widget2(time: "10:00 - 10:50", wid: classes[3]),
-              Widget2(time: "11:00 - 11:50", wid: classes[1])
+              Widget2(time: "11:00 - 11:50", wid: classes[1]),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(right: 15, top: 30, bottom: 30),
+                      height: 1.3,
+                      width: size.width * 0.2,
+                      color: Colors.blue,
+                    ),
+                    Text(
+                      "Lab",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 17),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(left: 15, top: 30, bottom: 30),
+                      height: 1.3,
+                      width: size.width * 0.2,
+                      color: Colors.blue,
+                    ),
+                  ]),
+              Widget2(time: "1:00 - 2:50", wid: classes[9])
             ],
           );
         }
